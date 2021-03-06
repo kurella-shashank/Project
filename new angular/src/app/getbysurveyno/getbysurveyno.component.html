@@ -1,0 +1,39 @@
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" 
+    integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+
+<h1 align="center">Employee Data</h1>
+
+<div class="container">
+
+    <div align="center">
+        <input type="number" [(ngModel)]="surveyNo" placeholder="Enter surveyNo">
+        <button (click)="getbysurveyno()" class="btn btn-primary">Show surveyNo Details</button>
+    </div>
+    <br/>
+
+<div *ngIf=land>
+<table class="table table-bordered table-striped table-hover table-sm">
+    <thead>
+        <tr class="bg-info text-white" align="center">
+            <th>surveyNo</th>
+            <th>Area</th>
+            <th>price</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr align="center">
+            <td>{{Land.surveyNo}}</td>
+            <td>{{Land.Area}}</td>
+            <td>{{Land.price }}</td>
+            <td><a href=""> <div class="glyphicon glyphicon-pencil"></div> </a></td>
+            <td><a href=""> <div class="glyphicon glyphicon-trash"></div> </a></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
